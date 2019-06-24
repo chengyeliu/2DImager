@@ -10,7 +10,7 @@ The codes have been tested with Python 3.
 
 ## Instruction
 
-The codes for harfware interfacing and UI are not provided. 
+The codes for hardware interfacing and UI are not provided. 
 
 The *pixel_selection.py* is used to partition a subarray with desired size.
 
