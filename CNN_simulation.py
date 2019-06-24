@@ -6,7 +6,7 @@ from keras import backend as K
 from keras.utils import to_categorical
 from keras.constraints import Constraint, non_neg
 
-#Customize Constraint to force weight range
+#Customize constraint to force weight range
 class CustomizedConstraint(Constraint):
     def __init__(self, min_value=0.0, max_value=7.5, rate=2.0, axis=0):
         self.min_value = min_value
@@ -25,7 +25,6 @@ class CustomizedConstraint(Constraint):
     def get_config(self):
         return {'axis': self.axis}
 
-#To simulate CNN to obtain weights for both convolutional and fully-connected layers
 def CNN_MNIST(x_train, y_train, x_test, y_test,
              conv2d = False,
              dense = False,
