@@ -10,12 +10,12 @@ The codes have been tested with Python 3.
 
 ## Instruction
 
-Run the script "main_cartpole.m" for the cart-pole problem.
-Run the script "main_mountaincar.m" for the mountain car problem.
-The codes that interface the hardware is not provided. 
+The codes for harfware interfacing and UI are not provided. 
 
-The real_array2 backend are dependent on the measurement system and hardware. 
-The demo runs a multilayer perceptron Q-network. For construction of other advanced Q-network, please use the framework https://github.com/zhongruiwang/memristorCNN.
+The pixel_selection.py is used to partition a subarray with desired size. 
+
+The CNN_simulation.py is used to generate target weights for CNN convolutonal and fully connected layers.
+
 The experimental data will be provided upon reasonable request.
 
 ## License
