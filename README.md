@@ -1,9 +1,8 @@
-The Python code for the 2D integrated electronics for in-memory imaging and in-memory analog neural network computing.
+The Python code for the *2D integrated electronics for in-memory imaging and in-memory analog neural network computing*.
 
 ## Authors
 
 Houk Jang, Chengye Liu, Henry Hinton, Min-Hyun Lee, Haeryong Kim, Hyeon-Jin Shin, Seongjun Park, Donhee Ham
-
 
 ## System Requirement
 
