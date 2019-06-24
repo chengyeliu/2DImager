@@ -10,7 +10,7 @@ The codes have been tested with Python 3.
 
 ## Instruction
 
-The *pixel_selection.py* is used to partition a subarray with desired size. 
+The *pixel_selection.py* is used to partition a subarray with desired size.
 The *CNN_simulation.py* is used to generate target weights for CNN convolutonal and fully connected layers.
 The codes for harfware interfacing and UI are not provided. The experimental data will be provided upon reasonable request.
 
