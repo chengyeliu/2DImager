@@ -68,9 +68,18 @@ def CNN_MNIST(x_train, y_train, x_test, y_test,
     network.add(layers.Flatten())
     
     #fully connected layer
-    network.add(layers.Dense(10, 
-                         kernel_constraint = non_neg(),
-                         activation='softmax'))
+    if dense == False:  #to simulate a convolutional layer
+        network.add(layers.Dense(10, 
+                             kernel_constraint = CustomizedConstraint(axis = [0,1]),
+                             bias = 0,
+                             activation='softmax'))
+    elif dense != False: #to use weights that are encoded in the array
+        network.add(layers.Dense(10,
+                              trainable = False,
+                              kernel_initializer =  dense_weightmap,
+                              bias = 0,
+                              activation='softmax',
+                              ))
     
     
     network.compile(loss=keras.losses.categorical_crossentropy,
