@@ -1,5 +1,3 @@
-# 2D Imager
-
 The Python code for the 2D integrated electronics for in-memory imaging and in-memory analog neural network computing.
 
 # Authors
