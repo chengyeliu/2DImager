@@ -9,7 +9,7 @@ Houk Jang, Chengye Liu, Henry Hinton, Min-Hyun Lee, Haeryong Kim, Hyeon-Jin Shin
 
 # System Requirement
 
-The codes have been tested on PyCharm and Jupyter Notebook using Python 3.
+The codes have been tested with Python 3.
 
 # Demo
 
