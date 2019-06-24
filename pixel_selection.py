@@ -1,26 +1,8 @@
 import numpy as np
 import itertools
-import matplotlib.pyplot as plt
-import os
 import pandas as pd
 from collections import Counter
 
-
-def Img_into_volt(Img, selection_mask, volt_scale = 1):
-
-    Img_sub = np.empty((16, (Img.shape[0]-3)*(Img.shape[1]-3)))
-    for n in range(Img.shape[0]-3):
-        for m in range(Img.shape[1]-3):
-            Img_sub[:,n*10+m] = Img[n:n+4,m:m+4].flatten()*volt_scale
-
-    
-    rows = np.where(selection_mask.sum(axis=1)!=0)[0]
-    output = np.zeros((32,100))
-    output[rows,:] = Img_sub
-        
-    return output
-    
- 
 def findRowCols(data, rowselectionsize=16, colselectionsize=10, searchingsize=18):
 
   data_sorted = np.sort(data, axis=0)
@@ -64,25 +46,11 @@ def make_selection_mask(data, rowselectionsize = 16, colselectionsize = 10, sear
     np.savetxt("./selection_mask.csv", selection,  delimiter=",")
     
     return selection
-    
-def get_target_scale(selection_mask, weights):
-    def index_gen():
-        for i in range(32):
-            for j in range(32):
-                if selection_mask[i, j] != 0:
-                    yield (i, j)
-
-    target_scale = np.zeros((32, 32))
-    select_index = index_gen()
-
-    for i in range(len(weights)):
-        for j in range(len(weights[0])):
-            target_scale[next(select_index)] = weights[i, j]
-
-    return target_scale
 
 
 if __name__ == "__main__":
+    # experimental data will be provided upon request
+    data = np.genfromtxt("../data/initial_data.csv", delimiter=",")
     # to partition a subarray of size 16 rows and 10 columns
     selection_mask = make_selection_mask(data, rowselectionsize = 16, colselectionsize = 10, searchingsize = 21)
 
