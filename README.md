@@ -1,4 +1,4 @@
-The Python code for the *2D integrated electronics for in-memory imaging and in-memory analog neural network computing*.
+The Python code for the *Atomically thin optoelectronic machine vision processor*.
 
 ## Authors
 
